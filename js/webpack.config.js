@@ -8,8 +8,8 @@ module.exports = (env) => {
   const isProduction = env.production;
   const srcDir = path.resolve(__dirname, './src');
   const publicDir = path.resolve(__dirname, '../public');
-  const libraryName = 'atk.google.maps';
-  const filename = 'atk-google-maps';
+  const libraryName = 'atk.geo.admin';
+  const filename = 'atk-geo-admin';
 
   const prodPerformance = {
     hints: false,
@@ -18,7 +18,7 @@ module.exports = (env) => {
   };
 
   return {
-    entry: { [filename]: srcDir + '/atk-google-api.js' },
+    entry: { [filename]: srcDir + '/atk-geo-admin-api.js' },
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? false : 'source-map',
     performance: isProduction ? prodPerformance : {},

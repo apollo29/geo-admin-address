@@ -1,5 +1,5 @@
 import atk from 'atk';
-import mapService from './services/google.maps.service';
+import mapService from './services/geo.admin.service';
 import addressLookupPlugin from './plugins/address-lookup.plugin';
 
 if (typeof atk !== 'undefined') {

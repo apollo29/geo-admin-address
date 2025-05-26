@@ -14,34 +14,18 @@ use Atk4\Ui\Js\JsChain;
 class JsLoader
 {
     /** @var string Javascript file location. */
-    public static $cdn = 'https://cdn.jsdelivr.net/gh/atk4/google-address';
+    public static $cdn = '/https://cdn.jsdelivr.net/gh/apollo29/geo-admin-address';
 
     /** @var string Javascript file version. */
     public static $version = '2.2.2';
 
     /** @var bool */
     private static $isLoaded = false;
+    protected static $apiUrl = '';
 
-    /** @var string The google api developer key. */
-    protected static $apiKey = '';
-
-    /** @var string Google maps version. */
-    protected static $apiVerstion = 'quarterly';
-
-    /** @var string[] Libraries to load with Google api. */
-    protected static $apiLibraries = ['places'];
-
-    /** @var array Google Map options as per https://googlemaps.github.io/js-api-loader/interfaces/LoaderOptions.html */
-    protected static $mapOptions = [];
-
-    public static function setGoogleApiKey(string $key): void
+    public static function setGeoAdminApiUrl(string $url): void
     {
-        self::$apiKey = $key;
-    }
-
-    public static function setMapOptions(array $options): void
-    {
-        self::$mapOptions = $options;
+        self::$apiUrl = $url;
     }
 
     /**
@@ -59,20 +43,19 @@ class JsLoader
             if (!$locationUrl) {
                 $cdn = self::$cdn;
                 $version = self::$version;
-                $locationUrl = "{$cdn}@{$version}/public/atk-google-maps.min.js";
+                $locationUrl = "{$cdn}@{$version}/public/atk-geo-admin.min.js";
             }
 
             $app->requireJs($locationUrl);
 
-            if (!self::$apiKey) {
-                throw new Exception('Google map Api Key not set.');
+            if (!self::$apiUrl) {
+                throw new Exception('GEO Admin API Url not set.');
             }
 
             $app->layout->js(true, (new JsChain('atk.mapService'))->setMapLoader(array_merge([
-                'apiKey' => self::$apiKey,
-                'version' => self::$apiVerstion,
-                'libraries' => self::$apiLibraries,
-            ], self::$mapOptions)));
+                'apiUrl' => self::$apiUrl,
+                'version' => self::$version
+            ])));
 
             self::$isLoaded = true;
         }
