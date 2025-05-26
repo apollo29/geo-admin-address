@@ -14,7 +14,7 @@ use Atk4\Ui\Js\JsChain;
 class JsLoader
 {
     /** @var string Javascript file location. */
-    public static $cdn = '/https://cdn.jsdelivr.net/gh/apollo29/geo-admin-address';
+    public static $cdn = 'https://cdn.jsdelivr.net/gh/apollo29/geo-admin-address';
 
     /** @var string Javascript file version. */
     public static $version = '2.2.2';
@@ -43,7 +43,8 @@ class JsLoader
             if (!$locationUrl) {
                 $cdn = self::$cdn;
                 $version = self::$version;
-                $locationUrl = "{$cdn}@{$version}/public/atk-geo-admin.min.js";
+                //$locationUrl = "{$cdn}@{$version}/public/atk-geo-admin.min.js";
+                $locationUrl = "{$cdn}/public/atk-geo-admin.min.js";
             }
 
             $app->requireJs($locationUrl);
