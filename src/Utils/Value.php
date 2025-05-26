@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Atk4\GoogleAddress\Utils;
+namespace Atk4\GeoAdminAddress\Utils;
 
 class Value
 {

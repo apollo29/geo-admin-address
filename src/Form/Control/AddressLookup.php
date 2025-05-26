@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Atk4\GoogleAddress\Form\Control;
+namespace Atk4\GeoAdminAddress\Form\Control;
 
-use Atk4\GoogleAddress\Utils\Build;
-use Atk4\GoogleAddress\Utils\JsLoader;
+use Atk4\GeoAdminAddress\Utils\Build;
+use Atk4\GeoAdminAddress\Utils\JsLoader;
 use Atk4\Ui\Form\Control;
 use Atk4\Ui\Form\Control\Line;
 

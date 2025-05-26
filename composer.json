@@ -1,30 +1,35 @@
 {
-  "name": "atk4/google-address",
+  "name": "apollo29/geo-admin-address",
   "type": "library",
-  "description": "Google Place interface for address form.",
+  "description": "Geo Admin interface for address form.",
   "keywords": ["atk4", "agile", "agile ui", "data", "framework"],
-  "homepage": "https://github.com/atk4/google-address",
+  "homepage": "https://github.com/apollo29/google-address",
   "license": "MIT",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "authors": [
+    {
+      "name": "Thomas D'Ascoli",
+      "email": "thomas@dasco.li"
+    },
     {
       "name": "Alain Belair",
       "email": "belair.alain@gmail.com"
     }
   ],
   "require": {
-    "atk4/ui": "~2.3 || ~3.0",
-    "php": ">=7.4.0"
+    "php": ">=7.4 <8.4",
+    "atk4/ui": "~5.0.0",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {
-      "Atk4\\GoogleAddress\\": "src/"
+      "Atk4\\GeoAdminAddress\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Atk4\\GoogleAddress\\tests\\": "tests/"
+      "Atk4\\GeoAdminAddress\\tests\\": "tests/"
     }
   }
 }

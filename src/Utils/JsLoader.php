@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Atk4\GoogleAddress\Utils;
+namespace Atk4\GeoAdminAddress\Utils;
 
 use Atk4\Ui\App;
 use Atk4\Ui\Exception;
-use Atk4\Ui\JsChain;
+use Atk4\Ui\Js\JsChain;
 
 /**
  * Load javascript files.

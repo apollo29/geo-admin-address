@@ -3,12 +3,14 @@
 declare(strict_types=1);
 
 /** @var \Atk4\Ui\App $app */
+/** @var App $app */
+require_once __DIR__ . "/init.app.php";
 
-use Atk4\GoogleAddress\Form\Control\AddressLookup;
-use Atk4\GoogleAddress\Utils\Build;
-use Atk4\GoogleAddress\Utils\JsLoader;
-use Atk4\GoogleAddress\Utils\Type;
-use Atk4\GoogleAddress\Utils\Value;
+use Atk4\GeoAdminAddress\Form\Control\AddressLookup;
+use Atk4\GeoAdminAddress\Utils\Build;
+use Atk4\GeoAdminAddress\Utils\JsLoader;
+use Atk4\GeoAdminAddress\Utils\Type;
+use Atk4\GeoAdminAddress\Utils\Value;
 use Atk4\Ui\Form;
 
 // Set Google developer key.

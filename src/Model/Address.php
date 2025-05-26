@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Atk4\GoogleAddress\Model;
+namespace Atk4\GeoAdminAddress\Model;
 
 use Atk4\Data\Model;
-use Atk4\GoogleAddress\Form\Control\AddressLookup;
-use Atk4\GoogleAddress\Utils\Type;
+use Atk4\GeoAdminAddress\Form\Control\AddressLookup;
+use Atk4\GeoAdminAddress\Utils\Type;
 
 /**
  * Model sample.

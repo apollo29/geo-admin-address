@@ -1,8 +1,8 @@
 {
-  "name": "atk-google-address",
-  "version": "2.2.0",
+  "name": "atk-geo-admin-address",
+  "version": "1.0.0",
   "description": "Agile Toolkit - Google Place interface for address.",
-  "main": "lib/atk-google-address.js",
+  "main": "lib/atk-geo-admin-address.js",
   "scripts": {
     "build": "webpack --env production",
     "dev": "webpack --progress --watch --env development",
@@ -18,17 +18,17 @@
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "terser-webpack-plugin": "^5.2.4",
-    "webpack": "^5.52.1",
+    "webpack": "5.94.0",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.15.4",
+    "@babel/runtime": "8.0.0-alpha.17",
     "@googlemaps/js-api-loader": "^1.12.3",
     "core-js": "^3.17.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/atk4/google-address"
+    "url": "https://github.com/apollo29/geo-admin-address"
   },
   "keywords": [
     "webpack",
@@ -42,7 +42,6 @@
   "author": "Agile Toolkit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/atk4/google-address/issues"
-  },
-  "homepage": "http://www.agiletoolkit.org/"
+    "url": "https://github.com/apollo29/geo-admin-address/issues"
+  }
 }
