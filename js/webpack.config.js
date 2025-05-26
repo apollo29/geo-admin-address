@@ -8,7 +8,7 @@ module.exports = (env) => {
   const isProduction = env.production;
   const srcDir = path.resolve(__dirname, './src');
   const publicDir = path.resolve(__dirname, '../public');
-  const libraryName = 'atk.geo.admin';
+  const libraryName = 'AddressLookup';
   const filename = 'atk-geo-admin';
 
   const prodPerformance = {
